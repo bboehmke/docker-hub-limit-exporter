@@ -23,3 +23,11 @@ You can stop everything with
 ```
 docker-compose down
 ```
+
+## Web UI
+
+Web          | URL
+-------------|-------------
+Grafana      | http://localhost:3000
+Prometheus   | http://localhost:9090
+Exporter     | http://localhost:8881
