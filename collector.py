@@ -97,15 +97,17 @@ class DockerHubCollector(object):
         return (limit, remaining, reset)
 
     def collect(self):
-
         (limit, remaining, reset) = self.get_registry_limits()
 
-        g = GaugeMetricFamily("DockerHubRateLimit", 'Docker Hub Rate Limit', labels=['instance'])
-        g.add_metric(["remaining_requests_total"], remaining)
-        g.add_metric(["limit_requests_total"], limit)
-        #g.add_metric(["reset"], reset) # TODO: Figure out if that this a timestamp or something else
+        gr = GaugeMetricFamily("dockerhub_limit_remaining_requests_total", 'Docker Hub Rate Limit Remaining Requests', labels=['limit'])
+        gr.add_metric(["remaining_requests_total"], remaining)
 
-        yield g
+        yield gr
+
+        gl = GaugeMetricFamily("dockerhub_limit_max_requests_total", 'Docker Hub Rate Limit Maximum Requests', labels=['limit'])
+        gl.add_metric(["max_requests_total"], limit)
+
+        yield gl
 
 if __name__ == '__main__':
 
