@@ -124,7 +124,11 @@ if __name__ == '__main__':
     username = os.environ.get('DOCKERHUB_USERNAME')
     password = os.environ.get('DOCKERHUB_PASSWORD')
 
-    REGISTRY.register(DockerHubCollector(bool(verbose), username, password))
+    dhc = DockerHubCollector(bool(verbose), username, password)
+
+    REGISTRY.register(dhc)
 
     while True:
-        time.sleep(1)
+        time.sleep(10)
+        dhc.collect()
+
