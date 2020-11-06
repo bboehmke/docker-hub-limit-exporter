@@ -83,6 +83,7 @@ class DockerHubCollector(object):
         if self.verbose:
             print_headers(resp_headers)
 
+        # TODO: Figure out what to return when the headers are missing for some reason.
         limit = 0
         remaining = 0
         reset = 0

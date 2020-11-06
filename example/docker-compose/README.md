@@ -2,6 +2,8 @@
 
 This is a fully fledged demo environment to get you started more easily.
 
+![Grafana dashboard for Docker Hub Rate Limit Prometheus Exporter](../../doc/images/grafana_prometheus_docker_hub_limit_exporter_demo.png)
+
 ## Build image
 
 In order to run locally, build the Docker image first.
@@ -23,3 +25,11 @@ You can stop everything with
 ```
 docker-compose down
 ```
+
+## Web UI
+
+Web          | URL
+-------------|-------------
+Grafana      | http://localhost:3000
+Prometheus   | http://localhost:9090
+Exporter     | http://localhost:8881

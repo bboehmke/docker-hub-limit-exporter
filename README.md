@@ -5,7 +5,11 @@ The exporter obtains an auth token and then queries the Docker Hub registry with
 
 You can use your [Docker Hub credentials](#docker-hub-authentication) to authenticate, otherwise an anonymous token is used.
 
-A full demo environment with Grafana, Prometheus and the exporter is located in [example/docker-compose/](example/docker-compose/).
+## Demo
+
+A demo environment with Grafana, Prometheus and the exporter is located in [example/docker-compose/](example/docker-compose/).
+
+![Grafana dashboard for Docker Hub Rate Limit Prometheus Exporter](doc/images/grafana_prometheus_docker_hub_limit_exporter_demo.png)
 
 ## Requirements
 
