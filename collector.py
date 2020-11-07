@@ -8,10 +8,10 @@ import time
 import requests
 import json
 import os
-from prometheus_client.core import GaugeMetricFamily, REGISTRY, CounterMetricFamily
+from prometheus_client.core import GaugeMetricFamily, REGISTRY
 from prometheus_client import start_http_server
 
-VERSION = '2.0.0'
+VERSION = '1.0.0'
 
 def print_headers(headers):
     print("HTTP Headers START")
