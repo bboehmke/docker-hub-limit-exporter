@@ -6,10 +6,14 @@ This is a fully fledged demo environment to get you started more easily.
 
 ## Build image
 
-In order to run locally, build the Docker image first.
+In order to run locally, build the Docker image in the repository root directory first.
 
 ```
+cd ../..
+
 make docker
+
+cd example/docker-compose
 ```
 
 ## Run Exporter, Prometheus and Grafana
